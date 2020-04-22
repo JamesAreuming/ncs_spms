@@ -18,12 +18,12 @@ public class SpmsDAOTest {
 	@Autowired
 	public SpmsDAO dao;
 	
-	//@Test
+	@Test
 	public void testDao() {
 		System.out.println(dao);
 	}
 	
-//	@Test
+	@Test
 	public void testInsert() throws Exception {
 		SpmsVO vo = new SpmsVO();
 		vo.setProjectName("테스트2");
@@ -34,7 +34,7 @@ public class SpmsDAOTest {
 		dao.insert(vo);
 	}
 	
-//	@Test
+	@Test
 	public void testReadyByNo() throws Exception {
 		dao.readByNo(1);
 		
@@ -45,7 +45,7 @@ public class SpmsDAOTest {
 		dao.list();
 	}
 	
-//	@Test
+	@Test
 	public void testUpdate() throws Exception {
 		SpmsVO vo = new SpmsVO();
 		vo.setProjectNo(6);
