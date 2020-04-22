@@ -61,8 +61,8 @@ $(function () {
 				<option value="보류">보류</option>
 			</select><br><br>
 			<div id="btns">
-				<button type="submit" id="btnAdd">수정</button></a>
-				<button type="reset" id="btnReset">취소</button></a>
+				<button type="submit" id="btnAdd">수정</button>
+				<button type="reset" id="btnReset">취소</button>
 			</div>			
 		</form>
 	</div>

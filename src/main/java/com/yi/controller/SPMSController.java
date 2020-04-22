@@ -63,7 +63,7 @@ public class SPMSController {
 	public String updatePost(SpmsVO vo) throws Exception{
 		service.update(vo);
 		System.out.println(vo);
-		return  "redirect:/ncs/list";
+		return "redirect:/ncs/list";
 	}
 	
 	//삭제
