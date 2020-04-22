@@ -1,5 +1,9 @@
 select user(), database ();
 
+create database jeong_ncs;
+
+use jeong_ncs;
+
 create table spms(
 	project_no int not null auto_increment,
 	project_name varchar(200) not null,
