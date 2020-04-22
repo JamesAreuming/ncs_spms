@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.SpmsMapper">
+	<insert id="insert" parameterType="SpmsVO">
+		insert into spms (project_name, project_content, project_start, project_end, project_state) values (#{projectName}, #{projectContent}, #{projectStart}, #{projectEnd}, #{projectState})
+	</insert>
+	
+	<select id="readByNo" resultType="SpmsVO">
+		select * from spms where project_no = #{projectNo}
+	</select>
+	
+	<select id="list" resultType="SpmsVO">
+		select * from spms order by project_no desc <!-- 역순으로 나오게 하기 -->
+	</select>
+	
+	<update id="update" parameterType="SpmsVO">
+		update spms
+			set project_name = #{projectName}, project_content = #{projectContent}, project_start = #{projectStart}, project_end = #{projectEnd}, project_state = #{projectState}
+		where project_no = #{projectNo}
+	</update>
+	
+	<delete id="delete" parameterType="SpmsVO">
+		delete from spms where project_no = #{projectNo}
+	</delete>
+</mapper>
